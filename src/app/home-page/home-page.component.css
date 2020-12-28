@@ -1,0 +1,13 @@
+
+        .jumbotron { 
+          /* background-color: rgb(148, 195, 207);  */
+          background-color: rgb(170, 169, 169);
+          color: #ffffff;
+          padding: 100px 25px;
+        }
+       
+        .divider{
+            width: 15px;
+            height:auto;
+            display: inline-block;
+        }

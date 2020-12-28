@@ -1,0 +1,52 @@
+<!-- Side navigation -->
+<div class="sidenav">
+    <!-- <a href="#">Students</a> -->
+    <a routerLink="/adminmodule" routerLinkActive="active">Dashboard</a>
+    <a routerLink="/students" routerLinkActive="active">Students</a>
+    <a routerLink="/add" routerLinkActive="active">Admission</a>
+    <a href="#">Academics</a>
+    <a href="#">Settings</a>
+    <a routerLink="/welcome" routerLinkActive="active">Logout</a> 
+  </div>
+  
+  <!-- Page content -->
+  <div class="main">
+    <h3>Students</h3>
+    <hr>
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+        </div>
+        <div class="panel-body">
+            <table class="table table-striped table-bordered">
+                <thead>
+                    <tr>
+                        <th>StudentId</th>
+                        <th>Name</th>
+                        <th>Course</th>
+                        <th>Fees</th>
+                        <th>MobileNo</th>
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let user of users | async">
+                        <td>{{user.id}}</td>
+                        <td>{{user.name}}</td>
+                        <td>{{user.course}}</td>
+                        <td>{{user.fees}}</td>
+                        <td>{{user.mobileNo}}</td>
+                        <td>{{user.username}}</td>
+                        <td>{{user.password}}</td>
+                        <td><button class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  </div>
+ 
+

@@ -1,0 +1,46 @@
+<!-- Side navigation -->
+<div class="sidenav">
+    <!-- <a href="#">Students</a> -->
+    <a routerLink="/studentmodule" routerLinkActive="active">Dashboard</a>
+    <a routerLink="" routerLinkActive="active">Courses</a>
+    <a href="#">Settings</a>
+    <a routerLink="/welcome" routerLinkActive="active">Logout</a>
+  </div>
+  
+  <!-- Page content -->
+  <div class="main">
+    <h3>Student Dashboard</h3>
+    <hr>
+
+    <h5>Student Details</h5>
+    <div *ngIf="user">
+        <div>
+        <label><b>Id: </b></label> {{user.id}}
+        </div>
+
+        <div>
+            <label><b>Name: </b></label> {{user.name}}
+        </div>
+
+        <div>
+            <label><b>Course: </b></label> {{user.course}}
+        </div>
+
+        <div>
+            <label><b>Mobile Number: </b></label> {{user.mobileNo}}
+        </div>
+
+        <div>
+            <label><b>Username: </b></label> {{user.username}}
+        </div>
+
+        <div>
+            <label><b>Password: </b></label> {{user.password}} 
+            <button (click)="updateUser(user.id)" class="btn btn-info active">Edit Password</button>
+        </div>
+
+
+    </div>
+
+
+</div>

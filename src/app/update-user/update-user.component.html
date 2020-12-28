@@ -1,0 +1,31 @@
+<!-- Side navigation -->
+<div class="sidenav">
+    <a routerLink="/studentmodule:id" routerLinkActive="active">Dashboard</a>
+    <a routerLink="#" routerLinkActive="active">Courses</a>
+    <a href="#">Settings</a>
+    <a routerLink="/welcome" routerLinkActive="active">Logout</a>
+  </div>
+  
+  <!-- Page content -->
+  <div class="main">
+    <h3>Update Password</h3>
+    <hr>
+    
+    <div [hidden]="submitted" style="width: 400px;">
+    <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+            <label for="name">New Password</label>
+            <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-info active">Update Password</button>
+        <div class="divider"></div>
+        <button type="submit" class="btn btn-info active">Cancel</button>
+    </form>
+</div>
+
+<div [hidden]="!submitted">
+    <h4>You submitted successfully!</h4>
+</div>
+    </div>
+
